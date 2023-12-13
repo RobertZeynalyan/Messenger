@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var messageTableView: UITableView!
     @IBOutlet weak var searchTextField: UITextField!
+    @IBOutlet weak var loginButton: UINavigationItem!
     var dataObject = Data()
     
     override func viewDidLoad() {
@@ -21,6 +22,7 @@ class ViewController: UIViewController {
         registerCells()
         dataObject.getData()
     }
+    
     
     private func setupDelegates() {
         messageTableView.delegate = self
@@ -36,11 +38,6 @@ class ViewController: UIViewController {
     private func registerCells() {
         messageTableView.register(UINib(nibName: "MessageTableViewCell", bundle: nil), forCellReuseIdentifier: "MessageTableViewCell")
         collectionView.register(UINib(nibName: "StoryCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "StoryCollectionViewCell")
-    }
-    
-    @IBAction func searchAction(_ sender: UIButton) {
-        
-        searchTextField.isHidden.toggle()
     }
 }
 
@@ -71,6 +68,6 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
 extension ViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        return true
+        return false
     }
 }

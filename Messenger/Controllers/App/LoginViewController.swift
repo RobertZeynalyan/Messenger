@@ -8,7 +8,7 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
+    
     @IBOutlet weak var fullName: UITextField!
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var phoneNumber: UITextField!
@@ -27,8 +27,6 @@ class LoginViewController: UIViewController {
     
     @IBAction func checkBoxAction(_ sender: UIButton) {
         
-        
     }
     
- 
 }

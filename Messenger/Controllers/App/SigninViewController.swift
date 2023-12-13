@@ -23,4 +23,8 @@ class SigninViewController: UIViewController {
     @IBAction func loginAction(_ sender: UIButton) {
         
     }
+    
+    @IBAction func signInAction(_ sender: UIButton){
+        
+    }
 }
